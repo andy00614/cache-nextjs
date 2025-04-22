@@ -5,5 +5,14 @@ export default async function Home() {
 
   console.log("cache_test", cache_test);
 
-  return <div>{JSON.stringify(cache_test)}</div>;
+  return <div>
+    {
+      cache_test?.map(item => {
+        return <div key={item.id} className="flex gap-4">
+          <p>{item.id}</p>
+          <p>{item.name}</p>
+        </div>
+      })
+    }
+  </div>;
 }
