@@ -1,5 +1,7 @@
 import { supabase } from "@/utils/fetch";
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const { data: cache_test } = await supabase.from("cache_test").select();
 
